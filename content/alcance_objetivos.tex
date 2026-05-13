@@ -1,0 +1,15 @@
+\section{Alcance y Objetivos}
+
+
+\subsection{Alcance del proyecto}
+El proyecto se enfoca en el diseño e implementación de un \textbf{planificador inteligente de ruta de estudio} para programas de formación universitaria cuya malla curricular puede modelarse como un Grafo Dirigido Acíclico (DAG). El problema que se busca resolver de manera efectiva es la generación automática de planes de estudio personalizados que respeten los prerrequisitos, se ajusten a las restricciones de carga académica y reduzcan el tiempo estimado de graduación, utilizando como insumo la información curricular institucional y el historial académico de cada estudiante.
+
+Esta formulación se considera una simplificación adecuada del problema general de asesoría académica porque se restringe a un único programa académico, asume reglas de prerrequisito y oferta de cursos bien definidas, y modela las preferencias del estudiante mediante parámetros explícitos (como el número máximo de créditos por semestre o el énfasis preferido). De este modo, se evita la complejidad asociada a múltiples programas, cambios normativos frecuentes o factores externos difíciles de observar, sin perder realismo en el contexto de uso universitario.
+
+
+
+\subsection{Objetivos del sistema}
+
+El \textit{objetivo cuantitativo} principal del sistema es construir rutas académicas que minimicen el número de periodos requeridos para completar el plan de estudios, manteniendo en cero las violaciones de prerrequisitos y respetando los límites de créditos por periodo. Complementariamente, se busca maximizar el avance promedio en créditos por semestre y permitir la comparación entre rutas alternativas según estos criterios. En términos \textit{cualitativos}, el objetivo es ofrecer recomendaciones transparentes y explicables que faciliten la toma de decisiones del estudiante y del asesor académico, mostrando de forma clara por qué se sugiere una secuencia determinada de asignaturas y cómo dicha secuencia impacta en el tiempo de graduación y en el riesgo de retrasos.
+
+\pagebreak

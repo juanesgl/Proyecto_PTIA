@@ -1,0 +1,12 @@
+\section{Diseño metodológico}
+
+\subsection{Estrategia general de solución}
+
+La estrategia general de solución consiste en modelar la malla curricular como un Grafo Dirigido Acíclico (DAG), en el que los nodos representan asignaturas y las aristas codifican las relaciones de prerrequisito, para luego formular la planificación académica como un problema de búsqueda y optimización bajo restricciones sobre dicho grafo. A partir de esta representación, el sistema genera configuraciones semestrales que respetan el orden topológico del DAG, las restricciones de carga académica y las políticas institucionales, evaluando cada configuración mediante una función de costo que sintetiza el desempeño de la ruta propuesta.
+
+Metodológicamente, el proceso se desarrolla en cuatro pasos principales. En primer lugar, se construye la base de conocimiento curricular a partir de la información institucional: asignaturas, créditos, prerrequisitos y oferta por periodo. En segundo lugar, se define el modelo del estudiante, incorporando su historial académico y sus preferencias (como carga máxima por semestre o énfasis deseado). En tercer lugar, el motor de planificación explora el espacio de rutas posibles mediante algoritmos de grafos y heurísticas de generación de planes, descartando aquellas que violan restricciones estructurales o de carga. Finalmente, se calculan métricas de desempeño para cada ruta viable y se selecciona la que mejor satisface los criterios definidos en el marco PEAS.
+
+Esta estrategia se justifica porque permite integrar en un mismo esquema la representación explícita del conocimiento curricular y un mecanismo de razonamiento que combina reglas duras (prerrequisitos, límites de créditos) con criterios de optimización (tiempo de graduación, distribución de cursos críticos). Además, el uso de un DAG y de algoritmos estándar de grafos facilita la extensibilidad del sistema, permitiendo incorporar en fases posteriores modelos de predicción de rendimiento o riesgo de reprobación sin modificar la estructura metodológica fundamental.
+
+\pagebreak
+

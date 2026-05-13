@@ -1,0 +1,54 @@
+\section{Descripción del problema}
+
+Se requiere un balance entre rigor técnico, disponibilidad de datos y viabilidad de implementación en un prototipo funcional. En esta sección se describe el proceso de evaluación utilizado para seleccionar la propuesta final, transformando las impresiones cualitativas iniciales en una métrica de decisión cuantitativa.
+
+\subsection{Criterios de selección}
+
+Para determinar el proyecto con mayor viabilidad y relevancia académica, se definieron cuatro criterios de evaluación, cada uno con un peso porcentual según su importancia para el desarrollo del prototipo:
+
+\begin{itemize}
+    \item \textbf{Complejidad Técnica (30\%):} Capacidad del proyecto para integrar múltiples áreas del conocimiento, como IA, modelado matemático y algoritmos de optimización.
+
+    \item \textbf{Disponibilidad de Datos (40\%):} Facilidad para obtener o generar conjuntos de datos representativos necesarios para entrenar y validar los modelos propuestos.
+
+    \item \textbf{Impacto y Aplicabilidad (20\%):} Potencial de la solución para resolver un problema real con utilidad en contextos académicos, industriales o tecnológicos.
+
+    \item \textbf{Innovación en el Enfoque (10\%):} Grado en el que la solución propuesta incorpora enfoques predictivos y proactivos frente a métodos tradicionales de carácter reactivo.
+\end{itemize}
+
+En la matriz de decisión que se presenta a continuación, estos criterios se abrevian como Complejidad Técnica (CT), Disponibilidad de Datos (DD), Impacto y Aplicabilidad (IA) e Innovación en el Enfoque (IN).
+
+\subsection{Matriz de decisión}
+
+La selección del proyecto se realizó mediante una evaluación numérica en una escala de 1 a 5 para cada criterio, lo que permite comparar objetivamente las tres propuestas iniciales. La puntuación total de cada proyecto se calculó como una suma ponderada de los criterios, de acuerdo con la expresión
+$$
+\text{Total} = 0.3 \cdot \text{CT} + 0.4 \cdot \text{DD} + 0.2 \cdot \text{IA} + 0.1 \cdot \text{IN}.
+$$
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Proyecto} & \textbf{CT (0.3)} & \textbf{DD (0.4)} & \textbf{IA (0.2)} & \textbf{IN (0.1)} & \textbf{Total} \\ \hline
+Predicción de Puntos Calientes & 4 & 2 & 4 & 4 & \textbf{3.2} \\ \hline
+\textbf{Planificador de Ruta de Estudio} & 4 & 5 & 5 & 3 & \textbf{4.5} \\ \hline
+Detector de Anomalías F1 & 5 & 3 & 3 & 4 & \textbf{3.7} \\ \hline
+\end{tabular}
+\caption{Matriz de decisión para la selección del proyecto en PTIA.}
+\end{table}
+
+A partir del análisis cuantitativo resumido en la Tabla~1, se seleccionó el \textbf{Planificador Inteligente de Ruta de Estudio}, con una puntuación total de 4.5. Esta alternativa supera a la Predicción de Puntos Calientes (3.2) y al Detector de Anomalías en Fórmula 1 (3.7), presentando además una alta disponibilidad de datos y la posibilidad de aplicar directamente algoritmos de grafos y modelos de recomendación sobre información académica existente. Estos factores facilitan el desarrollo de un prototipo funcional y evaluable en un entorno universitario real.
+
+\subsection{Definición del agente bajo el marco PEAS}
+
+Para estructurar el sistema propuesto se define el agente bajo el marco de Desempeño, Entorno, Actuadores y Sensores (PEAS), lo que permite especificar de manera explícita los requisitos funcionales del agente inteligente:
+
+\begin{itemize}
+    \item \textbf{Desempeño (Performance):} Maximizar el progreso académico del estudiante (medido en créditos aprobados por periodo), minimizar el tiempo estimado de graduación y reducir la aparición de retrasos asociados al incumplimiento de prerrequisitos. Adicionalmente, se busca mejorar la alineación entre la ruta de estudio y las preferencias declaradas por el estudiante.
+
+    \item \textbf{Entorno (Environment):} La malla curricular se modela como un Grafo Dirigido Acíclico (DAG) que representa asignaturas y prerrequisitos, complementado con el historial académico del estudiante y las restricciones institucionales de créditos y oferta de cursos por periodo. El entorno es dinámico, dado que los planes de estudio pueden cambiar con el tiempo, y parcialmente observable, ya que no se conocen a priori todas las preferencias y limitaciones del estudiante.
+
+    \item \textbf{Actuadores (Actuators):} El sistema genera planes de estudio personalizados por semestre, sugiere rutas de asignaturas para los próximos periodos y emite alertas sobre posibles cuellos de botella o retrasos académicos. Estas salidas se materializan en recomendaciones concretas de cursos a inscribir y en visualizaciones de la ruta académica propuesta.
+
+    \item \textbf{Sensores (Sensors):} Los datos de entrada incluyen el historial de calificaciones del estudiante, los créditos aprobados, los cursos disponibles en el siguiente periodo, las restricciones de prerrequisitos y las preferencias declaradas respecto a carga académica y áreas de interés. Estos sensores permiten al agente actualizar su conocimiento del estado del estudiante y del entorno curricular para ajustar las recomendaciones de manera continua.
+\end{itemize}

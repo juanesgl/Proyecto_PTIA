@@ -1,0 +1,27 @@
+\section{Trabajos relacionados}
+
+La revisión del estado del arte permite identificar investigaciones previas que respaldan la viabilidad técnica de las problemáticas planteadas. Para cada línea de investigación se resumen el problema abordado, la metodología empleada y el impacto alcanzado.
+
+\subsection{Predicción de puntos calientes en portátiles}
+
+\textbf{Determinación de los materiales con mayor eficiencia térmica en los componentes internos de los computadores portátiles} \\\\
+Este estudio experimental analiza la eficiencia de distintos materiales en la disipación de calor dentro de computadores portátiles \cite{investigacion_termica}. Para ello, se instrumentan componentes internos y se miden diferenciales de temperatura $\Delta T$ en puntos críticos, evaluando materiales como vidrio y cobre. Los resultados permiten identificar gradientes térmicos característicos y criterios para ubicar sensores de manera óptima, proporcionando una base física cuantitativa para modelos de IA que busquen predecir zonas de sobrecalentamiento y diseñar estrategias de control térmico.
+
+\textbf{How AI Can Revolutionize Thermal Management in Laptops} \\\\
+Esta investigación aborda el problema de la sobretemperatura en dispositivos ultradelgados sometidos a cargas intensivas de trabajo \cite{thermalAI}. Se propone un modelo de IA que analiza telemetría de hardware —temperatura, frecuencia de CPU y consumo energético— para predecir el comportamiento térmico y ajustar dinámicamente la ventilación y las políticas de energía. Los autores reportan reducciones cercanas al 20\% en la temperatura máxima del equipo, demostrando que los modelos predictivos basados en telemetría pueden mejorar de forma significativa la gestión térmica en portátiles.
+
+\subsection{Planificador inteligente de ruta de estudio}
+
+\textbf{An Intelligent Recommendation System for Automating Academic Advising Based on Curriculum Analysis and Performance Modeling} \\\\
+Este trabajo propone un sistema de recomendación para apoyar la asesoría académica en programas con currículos complejos \cite{sistema_recomendacion_academica}. El currículo se modela como una red de dependencias entre asignaturas y se emplean técnicas de IA explicable para generar rutas académicas personalizadas en función del rendimiento histórico. En sus experimentos, el sistema alcanza una precisión cercana al 86\% en la sugerencia de rutas, evidenciando su utilidad para mejorar la planificación de la trayectoria estudiantil.
+
+\textbf{An Integrated Approach for an Academic Advising System Using Association Rule} \\\\
+Esta investigación analiza el impacto de las decisiones académicas en la continuidad de los estudiantes, a partir de datos históricos \cite{alghamdi_academic_2024}. Se desarrolla un sistema basado en reglas de asociación que identifica patrones de éxito y riesgo entre combinaciones de asignaturas y resultados académicos, generando recomendaciones sobre secuencias de cursos más favorables. Los resultados muestran mejoras medibles en la planificación de asignaturas y en los indicadores de permanencia, lo que respalda el valor de los sistemas predictivos en el acompañamiento académico.
+
+\subsection{Detección de anomalías en telemetría de Fórmula 1}
+
+\textbf{F1 Telemetry Data Analyzer} \\\\
+Este estudio utiliza datos de telemetría de Fórmula 1 para analizar variaciones de rendimiento en vehículos de competición \cite{f1_telemetry}. Mediante la librería \textit{FastF1}, se procesan series de tiempo vuelta a vuelta de variables como velocidad, frenado y temperatura de componentes, con el fin de detectar desviaciones respecto al comportamiento esperado. Esta información permite identificar pérdidas de rendimiento que podrían pasar desapercibidas mediante supervisión humana y ajustar la configuración del vehículo y las estrategias de carrera.
+
+\textbf{Anomaly Detection in Satellite Telemetry Data Using a Sparse Feature-Based Method} \\\\
+Este trabajo presenta un método de detección de anomalías basado en la extracción de características dispersas en series de tiempo de telemetría satelital \cite{vos_anomaly_2022}. El modelo construye representaciones de alta dimensión y aplica técnicas de selección de características para identificar patrones atípicos incluso en presencia de ruido, mejorando la detección de fallos frente a métodos convencionales. Aunque se desarrolla para sistemas satelitales, su enfoque resulta aplicable a escenarios de alta complejidad como la Fórmula 1, donde la detección temprana de anomalías en telemetría puede prevenir daños críticos y optimizar el desempeño del vehículo.
